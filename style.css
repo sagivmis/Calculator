@@ -102,7 +102,7 @@
   position: relative;
   display: inline-block;
   background-color: hsl(30, 25%, 89%);
-  width: 180px;
+  width: 185px;
   height: 80px;
   left: 20px;
   border-radius: 5px;
@@ -117,7 +117,7 @@
   display: inline-block;
   background-color: hsl(25, 98%, 40%);
   content: '=';
-  width: 180px;
+  width: 185px;
   height: 80px;
   left: 20px;
   border-radius: 5px;
