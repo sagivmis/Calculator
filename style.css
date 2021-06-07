@@ -79,6 +79,7 @@
   position: relative;
   display: inline-block;
   background-color: hsl(225, 21%, 49%);
+  color: hsl(30, 25%, 89%);
   width: 80px;
   height: 80px;
   left: 20px;
@@ -106,6 +107,7 @@
   left: 20px;
   border-radius: 5px;
   margin: 10px;
+  color: hsl(221, 14%, 31%);
   /* font-size: 200px; */
   box-shadow: 0 6px 0px 0px hsl(28, 16%, 65%);
 }
@@ -119,6 +121,8 @@
   height: 80px;
   left: 20px;
   border-radius: 5px;
+  color: hsl(30, 25%, 89%);
+
   margin: 10px;
   box-shadow: 0 6px 0px 0px hsl(25, 99%, 27%);
 }
