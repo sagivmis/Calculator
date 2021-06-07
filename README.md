@@ -14,7 +14,7 @@ Thanks for checking out this front-end calculator.
 ![ss](./design/Screenshot.png)
 
 ### Links
-https://calculator-sm.herokuapp.com
+https://calculator1.vercel.app/
 
 ## Author
 sagiv mishaan
