@@ -12,6 +12,7 @@ Thanks for checking out this front-end calculator.
 
 ### Screenshot
 ![ss](./design/Screenshot 2021-06-07 191348.png)
+![alt text](./design/Screenshot 2021-06-07 191348.png)
 
 ### Links
 https://calculator-sm.herokuapp.com
