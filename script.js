@@ -31,6 +31,7 @@ window.onload = () => {
   let buffer = null;
   const container = document.querySelector('.container');
   const keys = container.querySelectorAll('.calc-button');
+  let equalUsed = false;
 
   //event listeners
   del.addEventListener('click', e => {
@@ -79,61 +80,83 @@ window.onload = () => {
         console.log(`Result::     ${operations[0] / operations[2]}`);
         break;
     }
+    equalUsed = true;
   });
+  const checkEqualUsed = () => {
+    if (equalUsed) {
+      res.innerHTML = '';
+      equalUsed = false;
+    }
+  };
 
   for (let i = 0; i < keys.length; i++) {
     keys[i].addEventListener('click', e => {
       //   console.log(e);
+      const calcOperation = number => {
+        checkEqualUsed();
+        res.innerHTML += number;
+        buffer = parseFloat(res.innerHTML);
+      };
       if (e.target.classList.contains('key-label')) {
         console.log(`Key Pressed::     ${e.target.id}`);
         if (res.innerHTML == '0') res.innerHTML = '';
         switch (e.target.id) {
           case 'one':
+            checkEqualUsed();
             res.innerHTML += 1;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'two':
+            checkEqualUsed();
             res.innerHTML += 2;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'three':
+            checkEqualUsed();
             res.innerHTML += 3;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'four':
+            checkEqualUsed();
             res.innerHTML += 4;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'five':
+            checkEqualUsed();
             res.innerHTML += 5;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'six':
+            checkEqualUsed();
             res.innerHTML += 6;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'seven':
+            checkEqualUsed();
             res.innerHTML += 7;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'eight':
+            checkEqualUsed();
             res.innerHTML += 8;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'nine':
+            checkEqualUsed();
             res.innerHTML += 9;
             buffer = parseFloat(res.innerHTML);
             break;
 
           case 'zero':
+            checkEqualUsed();
             if (res.innerHTML != '0') {
               res.innerHTML += 0;
               if (buffer < 1) buffer += 0;
