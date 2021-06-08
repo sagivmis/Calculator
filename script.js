@@ -52,32 +52,37 @@ window.onload = () => {
         operations.push(buffer);
         console.log(`added buffer ${buffer} to operations and initialized it`);
         buffer = 0;
-        console.log(operations[0], operations[2]);
+        console.log(operations[0],'plus', operations[2]);
         res.innerHTML = operations[0] + operations[2];
         console.log(`Result::     ${operations[0] + operations[2]}`);
+        operations = [];
         break;
       case 'minus':
         operations.push(buffer);
         console.log(`added buffer ${buffer} to operations and initialized it`);
         buffer = 0;
-        console.log(operations[0], operations[2]);
+        console.log(operations[0],'minus',operations[2]);
         res.innerHTML = operations[0] - operations[2];
         console.log(`Result::     ${operations[0] - operations[2]}`);
+        operations = [];
         break;
       case 'mul':
         operations.push(buffer);
         console.log(`added buffer ${buffer} to operations and initialized it`);
         buffer = 0;
+        console.log(operations[0],'mul', operations[2]);
         res.innerHTML = operations[0] * operations[2];
         console.log(`Result::     ${operations[0] * operations[2]}`);
+        operations = [];
         break;
       case 'div':
         operations.push(buffer);
         console.log(`added buffer ${buffer} to operations and initialized it`);
         buffer = 0;
-        console.log(operations[0], operations[2]);
+        console.log(operations[0],'div', operations[2]);
         res.innerHTML = operations[0] / operations[2];
         console.log(`Result::     ${operations[0] / operations[2]}`);
+        operations = [];
         break;
     }
     equalUsed = true;
@@ -92,11 +97,7 @@ window.onload = () => {
   for (let i = 0; i < keys.length; i++) {
     keys[i].addEventListener('click', e => {
       //   console.log(e);
-      const calcOperation = number => {
-        checkEqualUsed();
-        res.innerHTML += number;
-        buffer = parseFloat(res.innerHTML);
-      };
+
       if (e.target.classList.contains('key-label')) {
         console.log(`Key Pressed::     ${e.target.id}`);
         if (res.innerHTML == '0') res.innerHTML = '';
